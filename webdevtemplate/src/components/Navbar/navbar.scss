@@ -1,0 +1,82 @@
+.navbar {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    .logo-img {
+      height: 40px;
+      margin-right: 0.5rem;
+    }
+
+    span {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+
+    li {
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .dark-mode-toggle,
+    .language-icon {
+      color: inherit;
+    }
+
+    .login-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+  }
+
+  &.dark {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --primary-color: #4caf50;
+  }
+
+  &.light {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #4caf50;
+  }
+}
